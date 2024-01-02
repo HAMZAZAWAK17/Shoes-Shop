@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name":" Nike 1",
+        "price": 200,
+        "image": "/images/rednike.png"
+    },
+    {
+        "id": 2,
+        "name":" Nike 2",
+        "price": 250,
+        "image": "/images/bluenike.png"
+    },
+    {
+        "id": 3,
+        "name":" Nike 3",
+        "price": 290,
+        "image": "/images/orangenike.png"
+    },
+    {
+        "id": 4,
+        "name":" Nike 4",
+        "price": 200,
+        "image": "/images/redcr7.png"
+    },
+    {
+        "id": 5,
+        "name":" Nike 5",
+        "price": 300,
+        "image": "/images/greencr7.png"
+    },
+    {
+        "id": 6,
+        "name":" Nike 6",
+        "price": 200,
+        "image": "/images/red.png"
+    },
+    {
+        "id": 7,
+        "name":" Nike 7",
+        "price": 200,
+        "image": "/images/blue.png"
+    },
+    {
+        "id": 8,
+        "name":" Nike 8",
+        "price": 200,
+        "image": "/images/khazcr7.png"
+    }
+
+]

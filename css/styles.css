@@ -1,0 +1,738 @@
+/* Import de la police depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* Variables globales */
+:root {
+    --header-height: 3rem;
+    --title-color: hsl(0, 0%, 0%); /* Couleur noire pour le texte */
+    --text-color: hsl(0, 0%, 60%);
+    --body-color: #ffffff; /* Nouvelle couleur de fond blanche */
+    --body-font: "Poppins", sans-serif;
+    --h1-font-size: 1.5rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/* Réinitialisation des styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    text-decoration: none;
+    color: var(--body-color);
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--body-color);
+    
+}
+
+/* Ajoutez cette règle CSS pour le main */
+main {
+    order: -1;
+    flex-grow: 1;
+}
+
+
+header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background: #000000;
+}
+header .header-left {
+    display: flex;
+    align-items: center;
+}
+header .header-left .logo {
+    width: 140px;
+}
+header .header-left nav {
+    margin-left: auto; /* Center the nav links */
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around; /* Add space between navbar links */
+}
+
+/* Add styles for the social icons in the header */
+.header-right .social-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adjust the margin as needed */
+}
+
+.header-right .social-icons i {
+    font-size: 24px;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.header-right .social-icons i:hover {
+    color: #fbff00;
+}
+header .header-left nav ul {
+    display: flex;
+}
+nav ul li a {
+    display: block;
+    color: #cfd9e0;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: 0.2s;
+}
+nav ul li a:hover,
+nav ul li a.active {
+    color: #fff;
+}
+nav .login-signup {
+    display: none;
+}
+header .header-right {
+    display: flex;
+    align-items: center;
+}
+
+
+header .header-right .hamburger {
+    margin-left: 20px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .header-right .hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 10px ;
+    background: #fff;
+}
+@media only screen and (max-width: 1000px) {
+    header {
+        padding: 0 20px;
+    }
+    header .header-right .hamburger {
+        display: block;
+    }
+    header .header-left nav {
+        margin: 0;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+        background-color: #000000;
+        padding: 30px;
+        transition: 0.3s;
+        text-align: center;
+        z-index: -1;
+    }
+    header .header-left nav.active {
+        top: 70px;
+    }
+    header .header-left nav ul {
+        display: block;
+    }
+}
+@media only screen and (max-width: 500px) {
+    nav .login-signup {
+        display: block;
+        margin-top: 20px;
+    }
+    header .header-right .login-signup {
+        display: none;
+    }
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons i {
+    margin-left: 15px;
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    cursor: pointer;
+    
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: #fff;
+}
+
+/* Responsive design pour les petits écrans */
+@media only screen and (max-width: 900px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+
+/* Ajoutez ces règles CSS pour centrer le contenu sur mobile */
+/* Ajoutez ces règles CSS pour centrer home__info-description sur mobile */
+@media only screen and (max-width: 700px) {
+    .home__info-description {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .home__info-content {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+
+
+    .home__info {
+        text-align: center;
+        align-items: center;
+    }
+
+    .home__info-content {
+        text-align: center;
+    }
+
+    .home__info-description {
+        margin: 0 auto;
+    }
+
+
+
+/* Ajoutez ces règles CSS pour déplacer le bouton hamburger au centre sur mobile */
+
+    header {
+        flex-direction: column; /* Change la direction de la barre de navigation en colonne */
+        align-items: center; /* Centre les éléments horizontalement */
+        text-align: center; /* Centre le texte horizontalement */
+    }
+
+    header .nav__toggle {
+        order: 1; /* Change l'ordre pour déplacer le bouton en haut */
+    }
+
+    header nav {
+        width: 100%;
+        text-align: center;
+        order: -1; /* Change l'ordre pour afficher la barre de navigation en bas */
+    }
+}
+
+
+/* Contenu principal */
+main {
+    order: -1;
+    flex-grow: 1;
+    
+}
+
+
+@media only screen and (max-width: 320px) {
+    .container {
+        margin-inline: 0;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .container {
+        margin: 50px auto;
+    }
+}
+
+/* Styles spécifiques pour la section "home" */
+.home__container,
+.home__data,
+.home__content,
+.home__images,
+.home__info-content {
+    display: grid;
+}
+
+.home__container {
+    padding-block: 9rem 3rem;
+    row-gap: 3rem;
+}
+
+.home__data {
+    text-align: center;
+    row-gap: 3.5rem;
+}
+
+.home__content {
+    
+    row-gap: .75rem;
+}
+
+.home__stars {
+    display: flex;
+    column-gap: .25rem;
+    justify-content: center;
+}
+
+.home__title {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+}
+
+.home__price {
+    font-size: var(--h3-font-size);
+}
+
+.home__button {
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: rgb(0, 0, 0);
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.home__button:hover{
+    letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+.home__button i {
+    font-size: 1.25rem;
+}
+
+.home__button:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+.home__images {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home__swiper {
+    width: 100%;
+}
+
+.home__swiper .swiper-wrapper {
+    display: flex;
+}
+
+.home__article {
+    flex: 0 0 auto;
+    margin: 0 10px;
+}
+
+.home__img {
+    max-width: 100%;
+    height: auto;
+}
+
+.home__info {
+    display: flex;
+    align-items: center;
+    column-gap: .75rem;
+   
+}
+
+
+
+.home__info-content {
+    row-gap: 1.5rem;
+    margin-bottom: 1cm; /* Ajoutez cette ligne pour créer une marge en bas */
+}
+
+
+.home__info-description {
+    font-size: var(--small-font-size);
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.home__button-link {
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 1px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .3s;
+   }
+   
+   .home__button-link:active,
+   .home__button-link:hover {
+    outline: 0;
+   }
+   
+   a span {
+    background-color: rgb(5, 6, 45);
+    padding: 14px 6px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    padding-right: 3px;
+    transition: 300ms;
+   }
+   
+   a:hover span {
+    background: none;
+   }
+   
+   a:active {
+    transform: scale(0.9);
+   }
+
+.swiper {
+    margin-inline: initial;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -2rem;
+}
+
+.swiper-pagination {
+    bottom: 10px;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 3px;
+    background-color: #fff;
+    opacity: 0.7;
+    margin: 0 5px;
+    transition: background-color 0.3s, width 0.3s, opacity 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+    width: 20px;
+    background-color: #fff;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet:hover {
+    background-color: #fff;
+}
+
+/* Styles de la barre de défilement personnalisée */
+::-webkit-scrollbar {
+    width: .6rem;
+    background-color: hsl(0, 0%, 12%);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(0, 0%, 20%);
+}
+
+.home__img,
+.players__img,
+.home__info-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Styles spécifiques pour la section "players" */
+.players {
+    background-color: #f2f2f2;
+    padding: 3rem 0;
+}
+
+.players__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.players__title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.players__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.players__img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.players__img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Styles spécifiques pour la section "footer" */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+.social-icons-footer {
+    display: flex;
+    column-gap: 15px;
+}
+
+.social-icons-footer i {
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icons-footer i:hover {
+    color: #fbff00;
+}
+
+
+/* Media queries pour différentes tailles d'écran */
+@media screen and (max-width: 320px) {
+    .container {
+        margin-inline: column;
+    }
+
+    .home__info {
+        flex-direction: column;
+        row-gap: 2rem;
+        text-align: center;
+    }
+
+    .home__button-link {
+        justify-self: center;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .home__container {
+        grid-template-columns: 400px;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    .nav {
+        height: calc(var(--header-height) + 2rem);
+    }
+
+    .nav__close,
+    .nav__toggle {
+        display: flex;
+        align-items: center;
+        column-gap: 4rem;
+    }
+
+    .nav__list {
+        flex-direction: row;
+        column-gap: 4rem;
+    }
+
+    .nav__social {
+        margin: 0;
+    }
+
+    .home__container {
+        height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        column-gap: 4rem;
+        margin: 50px;
+    }
+
+    .home__data {
+        text-align: initial;
+    }
+
+    .home__stars {
+        justify-content: initial;
+    }
+
+    .home__button {
+        justify-self: flex-start;
+    }
+
+    .home__info {
+        flex-direction: column;
+        margin-top: 0;
+        row-gap: 1.25rem;
+        align-items: initial;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .container {
+        margin-inline: auto;
+        margin: 50px;
+    }
+
+    .home__container {
+        height: initial;
+        grid-template-columns: repeat(3, 320px);
+        justify-content: space-between;
+        padding-block: 11rem 4rem;
+    }
+
+    .home__data {
+        row-gap: 9.5rem;
+    }
+
+    .home__stars {
+        column-gap: .75rem;
+    }
+
+    .home__img {
+        width: 300px;
+    }
+
+    .home__info-img {
+        width: 150px;
+    }
+
+    .home__info-description {
+        font-size: var(--normal-font-size);
+    }
+
+    .home__info-content {
+        row-gap: 7.5rem;
+    }
+
+    @media screen and (min-width: 1500px) and (min-height: 1032px) {
+        .home__container {
+            height: 100vh;
+            align-items: center;
+        }
+    }
+}
+
+
+
+/* Styles CSS pour la navigation mobile */
+/* Ajoutez ces règles CSS pour cacher le bouton de hamburger sur les dispositifs PC */
+@media only screen and (min-width: 701px) {
+    header .header-right .hamburger {
+        display: none;
+    }
+
+    header .header-left nav {
+        position: initial;
+        top: auto;
+        left: auto;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+        transition: 0s;
+        text-align: left;
+        z-index: initial;
+    }
+
+    header .header-left nav ul {
+        display: flex;
+    }
+}
+
+/* ... Votre contenu existant ... */
+
+/* Styles CSS pour la section "home__img" */
+.home__img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media only screen and (max-width: 480px) {
+    header {
+        padding: 0 15px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li a {
+        margin: 10px 0;
+    }
+
+    .home__container,
+    .home__data,
+    .home__content,
+    .home__images,
+    .home__info-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .home__button {
+        margin-top: 20px;
+    }
+
+    .players__gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <title>Z-SHOES</title>
+</head>
+<style>
+    /* Add styles for the cover image */
+    .cover-image {
+        height: 600px; /* Adjust the height as needed */
+        background-image: url('/images/WALLPAPER.jpg'); /* Set the path to your cover image */
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+<body > 
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <a href="#">Z-SHOES</a>
+            </div>
+            <nav>
+                
+                <ul>
+                    <li>
+                        <a href="#" class="active">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#PLAYER">PLAYER</a>
+                    </li>
+                    
+                    <li>
+                        <a href="./shoping.html">SHOP</a>
+                    </li>
+                    
+                </ul>
+                
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="social-icons">
+                <a href="https://www.facebook.com"><i class='bx bxl-facebook-square' style='color:#ffffff'></i></a>
+                <a href="https://www.instagram.com"><i class='bx bxl-instagram' style='color:#ffffff'></i></a>
+                <a href="https://www.twitter.com"><i class='bx bxl-twitter' style='color:#ffffff'></i></a>
+            </div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="cover-image">
+        <!-- You can set the background image in your CSS -->
+    </div>
+
+       
+    <section class="home__container mobile-container">
+
+        <section class="home">
+            <div class="home__container container">
+                <div class="home__data">
+                    <div class="home__content">
+                        <div class="home__stars">
+                            <i class='bx bxs-star' style='color:#fbff00'></i>
+                            <i class='bx bxs-star' style='color:#fbff00'></i>
+                            <i class='bx bxs-star' style='color:#fbff00'></i>
+                            <i class='bx bxs-star' style='color:#fbff00'></i>
+                            <i class='bx bxs-star-half' style='color:#fbff00'></i>
+                        </div>
+
+                        <h1 class="home__title">
+                            Welcome to your <br>
+                            dream shop <br>
+                            
+                        </h1>
+
+                        <h3 class="home__price"></h3>
+                    </div>
+
+                    <a href="/shoping.html" class="home__button">
+                        ADD TO CART
+                        <i class='bx bx-chevron-right'></i>
+                    </a>
+                </div>
+
+                <div class="home__images">
+                    <div class="home__swiper swiper"  >
+                        <div class="swiper-wrapper">
+                            <article class="home__article swiper-slide">
+                                <img src="./images/bluenike.png" alt="image" class="home__img">
+                            </article>
+
+                            <article class="home__article swiper-slide">
+                                <img src="./images/rednike.png" alt="image" class="home__img">
+                            </article>
+
+                            <article class="home__article swiper-slide">
+                                <img src="./images/orangenike.png" alt="image" class="home__img">
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="home__info">
+                    <img src="./images/LOGO2.png" alt="image" class="home__info-img">
+
+                    <div class="home__info-content">
+                        <p class="home__info-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                            occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum.
+                        </p>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+        <section id="PLAYER"  class="players">
+            <div class="players__container container">
+                <h2 class="players__title">Meet Our Star Players</h2>
+                <div class="players__gallery">
+                    <img src="/images/Cristiano Ronaldo.jpeg" alt="Player 1" class="players__img">
+                    <img src="/images/ziyech.jpeg" alt="Player 2" class="players__img">
+                    <img src="/images/Neymar.jpeg" alt="Player 3" class="players__img">
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="footer__container container">
+            <div class="copyright">
+                <p>&copy; 2023 Z-SHOES. All rights reserved.</p>
+            </div>
+            <div class="social-icons-footer">
+                <a href="https://www.facebook.com"><i class='bx bxl-facebook-square' style='color:#ffffff'></i></a>
+                <a href="https://www.instagram.com"><i class='bx bxl-instagram' style='color:#ffffff'></i></a>
+                <a href="https://www.twitter.com"><i class='bx bxl-twitter' style='color:#ffffff'></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- GSAP -->
+    <script src="/js/gsap.min.js"></script>
+    <!-- SWIPER -->
+    <script src="/js/swiper-bundle.js"></script>
+    <!-- MAIN -->
+    <script src="/js/main.js"></script>
+
+
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        nav = document.querySelector("nav");
+        hamburger.onclick = function() {
+            nav.classList.toggle("active");
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+        // Add your animation code here using GSAP
+        gsap.from(".home__stars", { opacity: 0, duration: 1, y: -50, stagger: 0.2 });
+        gsap.from(".home__title", { opacity: 0, duration: 1, y: -50, delay: 0.5 });
+        gsap.from(".home__button", { opacity: 0, duration: 1, y: 50, delay: 1 });
+        gsap.from(".home__img", { opacity: 0, duration: 1, scale: 0.5, stagger: 0.2, delay: 1.5 });
+        gsap.from(".players__title", { opacity: 0, duration: 1, y: -50, delay: 2 });
+
+        // You can add more animations as needed
+    });
+
+    // Toggle navigation on hamburger click
+    hamburger = document.querySelector(".hamburger");
+    nav = document.querySelector("nav");
+    hamburger.onclick = function() {
+        nav.classList.toggle("active");
+    };
+    </script>
+</body>
+
+</html>
